@@ -1,20 +1,500 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Appo — פתרונות חכמים לעסקים</title><meta name="description" content="Appo הופכת תהליכים מסובכים לאפליקציות פשוטות שעובדות."><style>
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&family=Gveret+Levin&display=swap');
-:root{--blue:#7a1834;--lime:#ff7a68;--ink:#211318;--cream:#fff3e8;--white:#fff;--line:#432631;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:white;font-family:Heebo,Arial,sans-serif;line-height:1.5;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:100px;padding:14px 23px;font-weight:800;border:1px solid #ffffff38;background:white;color:var(--ink);transition:.25s}.pill:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0004}.outline{background:transparent;color:white}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:800;color:var(--lime)}
-header{position:fixed;top:0;inset-inline:0;z-index:10;padding:16px 0}nav{height:62px;background:#24151bdd;border:1px solid #ffffff20;backdrop-filter:blur(18px);border-radius:100px;padding:0 12px 0 8px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800}.logo{min-width:74px;height:44px;padding:0 16px;border-radius:100px;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-size:18px;font-weight:900;direction:ltr}.navlinks{display:flex;gap:26px;color:#c9c9d0;font-size:14px}
-.hero{min-height:100svh;padding:145px 0 70px;display:grid;align-items:center;position:relative}.hero:before{content:"Appo";position:absolute;direction:ltr;left:-2vw;top:7vh;font-size:clamp(130px,25vw,360px);font-weight:900;letter-spacing:-.1em;color:#ffffff05;line-height:1;pointer-events:none}.hero-grid{display:grid;grid-template-columns:1fr;gap:0;max-width:900px;align-items:center;position:relative}h1{font-size:clamp(57px,8vw,105px);line-height:.93;letter-spacing:-.055em;margin:20px 0 28px}.stroke{color:transparent;-webkit-text-stroke:2px white}.progress-word{display:inline-block;font-family:'Gveret Levin',Heebo,sans-serif;font-size:1.12em;font-weight:400;color:var(--lime);letter-spacing:0;transform:rotate(-2deg);text-shadow:none}.hero p{font-size:clamp(18px,2vw,23px);color:#bfc0c9;max-width:660px}.hero-highlight{color:var(--lime);font-weight:800;white-space:nowrap;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.electric{background:var(--blue);color:white;border:0}.whatsapp-button{background:#25D366;color:#fff;border:0;box-shadow:0 10px 30px #25D36633}.micro{font-size:13px;color:#8d8e98;margin-top:13px}
-.chaos{height:520px;position:relative}.note{position:absolute;border-radius:18px;padding:16px 20px;font-weight:700;box-shadow:0 24px 60px #0007;animation:float 5s ease-in-out infinite}.n1{background:#ff7a68;top:28px;right:15px;transform:rotate(8deg)}.n2{background:white;color:#111;top:145px;left:0;transform:rotate(-8deg);animation-delay:-1s}.n3{background:var(--lime);color:#111;bottom:65px;right:0;transform:rotate(-5deg);animation-delay:-2s}.n4{background:#f2a07f;bottom:5px;left:35px;transform:rotate(6deg);animation-delay:-3s}.app{position:absolute;inset:65px 55px 45px;background:var(--blue);border-radius:32px;border:7px solid #2e1820;padding:24px;box-shadow:0 35px 100px #7a183455}.appbar{display:flex;justify-content:space-between;font-weight:800}.panel{margin-top:28px;background:white;color:#101016;border-radius:20px;padding:20px}.line{height:10px;border-radius:9px;background:#e5e5e8;margin:12px 0}.line:nth-child(2){width:70%;background:var(--lime)}@keyframes float{50%{translate:0 -12px}}
-.marquee{overflow:hidden;border-block:1px solid #ffffff20;padding:18px 0;background:var(--lime);color:#101010;font-size:22px;font-weight:900;white-space:nowrap}.marquee div{display:inline-block;animation:run 20s linear infinite;direction:ltr}@keyframes run{to{transform:translateX(-50%)}}
-section{padding:110px 0}.light{background:var(--cream);color:var(--ink)}h2{font-size:clamp(43px,7vw,82px);line-height:.98;letter-spacing:-.05em;margin:13px 0 45px;max-width:920px}
-.statement{background:var(--blue);position:relative;overflow:hidden}.statement h2{font-size:clamp(55px,9vw,125px);max-width:none}.statement .lime{color:var(--lime)}.statement p{font-size:22px;max-width:680px}.services{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #ffffff33}.service{padding:32px 0;border-bottom:1px solid #ffffff33;display:grid;grid-template-columns:65px 1fr;gap:18px}.service:nth-child(odd){padding-left:30px;border-left:1px solid #ffffff33}.service:nth-child(even){padding-right:30px}.service b{font-size:26px}.service span{font-size:15px;color:#a7a8b2}.num{color:var(--lime);font-weight:900}
-.process{background:var(--cream);color:var(--ink)}.steps{counter-reset:s}.step{counter-increment:s;display:grid;grid-template-columns:100px 1fr 1fr;padding:30px 0;border-bottom:2px solid #111;align-items:start}.step:before{content:"0" counter(s);font-weight:900;font-size:25px;color:var(--blue)}.step b{font-size:29px}.step p{font-size:18px;margin:5px 0;color:#555}
-.form-section{background:var(--lime);color:var(--ink)}.form-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px}.sticky{position:sticky;top:110px;align-self:start}.contact{margin-top:30px;font-size:20px;font-weight:800}.form{background:white;border:3px solid var(--ink);border-radius:28px;padding:30px;box-shadow:12px 12px 0 var(--ink)}.form h3{font-size:24px;margin:26px 0 15px}.form h3:first-child{margin-top:0}.row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:6px;margin-bottom:13px}.field label{font-weight:700}input,textarea,select{font:inherit;width:100%;padding:13px;border:2px solid #c8c8c8;border-radius:11px;background:#fafafa}textarea{min-height:95px}.submit{width:100%;background:var(--blue);color:white;border:0;font-size:17px;cursor:pointer}.status{display:none;padding:12px;margin-top:12px;background:#ffe1dc;border-radius:10px}footer{padding:36px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#aaa}.foot b{color:white}
-@media(max-width:820px){.navlinks{display:none}.hero-grid,.form-grid{grid-template-columns:1fr}.chaos{height:450px}.services{grid-template-columns:1fr}.service:nth-child(n){padding:25px 0;border-left:0}.step{grid-template-columns:65px 1fr}.step p{grid-column:2}.sticky{position:static}}@media(max-width:520px){.wrap{width:calc(100% - 24px)}header .pill{padding:10px 14px;font-size:13px}.brand span:last-child{display:none}.hero{padding-top:115px}.chaos{height:390px}.app{inset:55px 25px 40px}.note{font-size:13px}.row{grid-template-columns:1fr}.form{padding:20px;box-shadow:7px 7px 0 #111}section{padding:78px 0}}
-</style><link rel="stylesheet" href="upgrade.css"></head><body><header><nav class="wrap"><a class="brand" href="#"><span class="logo">Appo</span><span>Appo / פתרונות חכמים לעסקים</span></a><div class="navlinks"><a href="#services">מה אנחנו עושים</a><a href="#process">התהליך</a></div><a class="pill whatsapp-button" href="https://wa.me/972586612727?text=%D7%94%D7%99%D7%99%20Appo%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%91%D7%A0%D7%99%D7%99%D7%AA%20%D7%90%D7%A4%D7%9C%D7%99%D7%A7%D7%A6%D7%99%D7%94%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99" target="_blank" rel="noopener">דברו איתנו ב־WhatsApp</a></nav></header><main>
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><span class="eyebrow">פיתוח בהתאמה אישית / 2026</span><h1><span class="headline-line">פחות להתעסק.</span><span class="headline-line">יותר <span class="progress-word">להתקדם.</span></span></h1><p>הופכים תהליכים ידניים, הודעות וטבלאות <strong class="hero-highlight">לאפליקציה אחת ברורה</strong> — שנבנית בדיוק לדרך שבה העסק שלכם עובד.</p><div class="actions"><a class="pill electric" href="#form">לפרטים והרשמה <span aria-hidden="true">↙</span></a><a class="pill outline" href="https://wa.me/972586612727">WhatsApp</a></div><div class="micro">שיחת היכרות ללא עלות וללא התחייבות</div></div></div></section>
-<div class="marquee" aria-hidden="true"><div> CLARITY → SIMPLE SYSTEMS → LESS ADMIN → MORE TIME → CLARITY → SIMPLE SYSTEMS → LESS ADMIN → MORE TIME → CLARITY → SIMPLE SYSTEMS → LESS ADMIN → MORE TIME → </div></div>
-<section class="statement" id="services"><div class="wrap"><span class="eyebrow">מה אפשר לבנות?</span><h2>העסק שלכם.<br><span class="lime">המערכת שלכם.</span></h2><div class="services"><div class="service"><span class="num">01</span><div><b>ניהול לקוחות</b><br><span>מידע, מעקב, תיעוד ואזור אישי</span></div></div><div class="service"><span class="num">02</span><div><b>רישום ונוכחות</b><br><span>הרשמה, מיון, קבוצות ומעקב</span></div></div><div class="service"><span class="num">03</span><div><b>תורים והזמנות</b><br><span>זמינות, סליקה ועדכונים</span></div></div><div class="service"><span class="num">04</span><div><b>AI ואוטומציות</b><br><span>פחות הקלדה ופעולות חוזרות</span></div></div></div></div></section>
-<section class="process" id="process"><div class="wrap"><span class="eyebrow" style="color:#7a1834">איך זה קורה?</span><h2>כל העסק שלכם בכף יד</h2><p class="process-intro">רעיון אחד. ארבעה צעדים. מערכת שעובדת בדרך שלכם.</p><div class="steps"><div class="step"><b>מכירים</b><p>שאלון קצר ושיחה ראשונית ללא עלות.</p></div><div class="step"><b>מאפיינים</b><p>מגדירים יחד מה באמת נחוץ ומה מיותר.</p></div><div class="step"><b>בונים</b><p>אתם רואים, בודקים ומשפיעים לאורך הדרך.</p></div><div class="step"><b>עולים לאוויר</b><p>הדרכה וליווי במשך שלושה חודשים.</p></div></div></div></section>
-<section class="form-section" id="form"><div class="wrap form-grid"><div class="sticky"><span class="eyebrow" style="color:#111">מתחילים כאן</span><h2>מה הייתם רוצים שיהיה פשוט יותר?</h2><p>אין צורך לדבר טכנולוגית. ספרו לנו על העסק ועל מה שמסבך את היום שלכם — ואנחנו נביא את הפתרון</p><div class="contact"><a href="https://wa.me/972586612727">058-661-2727</a><br><a href="mailto:appocreative@gmail.com">appocreative@gmail.com</a></div></div><form class="form" id="lead"><h3>השאירו פרטים ונחזור אליכם</h3><div class="field"><label for="lead-name">שם מלא *</label><input id="lead-name" name="name" autocomplete="name" required></div><div class="field"><label for="lead-phone">טלפון *</label><input id="lead-phone" name="phone" type="tel" autocomplete="tel" required></div><div class="field"><label for="lead-email">מייל *</label><input id="lead-email" name="email" type="email" autocomplete="email" required></div><button class="pill submit" type="submit">דברו איתי</button><div class="status" id="status" role="status"></div></form></div></section></main><footer><div class="wrap foot"><b>Appo</b><span>פתרונות חכמים לעסקים קטנים</span><span>058-661-2727 · appocreative@gmail.com</span></div></footer><script>
-const ENDPOINT="https://script.google.com/macros/s/AKfycbwyA1RhkYWSq-g9DMHYYLiRQtkRUGqEk7BTB4_KUuGjbl5gslt7YTbBkmIsoS-Q0ah0/exec";const f=document.querySelector("#lead"),s=document.querySelector("#status"),submit=f.querySelector("button[type=submit]");f.addEventListener("submit",async e=>{e.preventDefault();s.style.display="none";submit.disabled=true;submit.textContent="שולחים...";try{await fetch(ENDPOINT,{method:"POST",body:new FormData(f),mode:"no-cors"});s.style.display="block";s.style.background="#dfffc0";s.textContent="הפרטים נשלחו בהצלחה! נחזור אליכם בהקדם.";f.reset()}catch(x){s.style.display="block";s.style.background="#ffe1dc";s.textContent="לא הצלחנו לשלוח. אפשר לפנות אלינו ב־WhatsApp."}finally{submit.disabled=false;submit.textContent="דברו איתי"}});
-</script><script src="upgrade.js"></script></body></html>
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appo — פתרונות חכמים לעסקים</title>
+<meta name="description" content="Appo הופכת תהליכים מסובכים לאפליקציות פשוטות שעובדות">
+<meta name="theme-color" content="#06060f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06060f; --bg2:#0c0c1d; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
+  --text:#f2f2fa; --muted:#a3a3c2; --violet:#7c5cff; --cyan:#22d3ee; --pink:#ff5ca8; --lime:#b6ff5c;
+  --grad:linear-gradient(120deg,var(--violet),var(--cyan) 50%,var(--pink));
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+main{overflow-x:clip}
+body{font-family:'Heebo',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--violet);color:#fff}
+
+/* ---------- Background ---------- */
+#stars{position:fixed;inset:0;z-index:-3;width:100%;height:100%}
+.aurora{position:fixed;inset:0;overflow:hidden;z-index:-2;filter:blur(90px);opacity:.55;pointer-events:none}
+.aurora span{position:absolute;margin:-10%;border-radius:50%;mix-blend-mode:screen;animation:float 22s ease-in-out infinite}
+.aurora span:nth-child(1){width:55vmax;height:55vmax;background:var(--violet);top:-10%;right:-10%}
+.aurora span:nth-child(2){width:45vmax;height:45vmax;background:var(--cyan);bottom:-15%;left:-10%;animation-delay:-7s;opacity:.6}
+.aurora span:nth-child(3){width:35vmax;height:35vmax;background:var(--pink);top:40%;right:30%;animation-delay:-14s;opacity:.45}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(8vw,-6vh) scale(1.15)}66%{transform:translate(-6vw,8vh) scale(.9)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cursor-glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(124,92,255,.22),transparent 60%);transform:translate(-50%,-50%);left:-999px;top:-999px;transition:opacity .3s}
+
+/* ---------- Progress + Nav ---------- */
+.progress{position:fixed;top:0;right:0;left:0;height:3px;background:var(--grad);transform-origin:right;transform:scaleX(0);z-index:100}
+nav{position:fixed;top:14px;right:50%;transform:translateX(50%);z-index:90;width:min(1100px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 18px;border-radius:999px;background:rgba(12,12,29,.55);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);transition:padding .3s,background .3s}
+nav.scrolled{background:rgba(12,12,29,.8)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;letter-spacing:-.5px}
+.logo-mark{width:34px;height:34px;border-radius:11px;background:var(--grad);background-size:200% 200%;animation:gradmove 6s ease infinite;display:grid;place-items:center;font-size:1.05rem;color:#fff;box-shadow:0 0 24px rgba(124,92,255,.6)}
+.logo small{display:block;font-size:.68rem;font-weight:400;color:var(--muted);letter-spacing:0;margin-top:-4px}
+.nav-links{display:flex;gap:26px;font-size:.95rem;color:var(--muted)}
+.nav-links a{position:relative;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a::after{content:"";position:absolute;bottom:-4px;right:0;width:0;height:2px;background:var(--grad);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+@keyframes gradmove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* ---------- Buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:1rem;border:0;cursor:pointer;font-family:inherit;color:#fff;isolation:isolate;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .3s;will-change:transform}
+.btn-primary{background:var(--grad);background-size:200% 200%;animation:gradmove 5s ease infinite;box-shadow:0 10px 40px -10px rgba(124,92,255,.8)}
+.btn-primary:hover{box-shadow:0 14px 50px -8px rgba(34,211,238,.7)}
+.btn-primary::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(120%);transition:transform .7s;z-index:-1}
+.btn-primary:hover::before{transform:translateX(-120%)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-wa{background:#25d366;padding:10px 18px;font-size:.92rem;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- Layout ---------- */
+section{position:relative;padding:120px 20px;max-width:1180px;margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:.85rem;color:var(--muted);background:var(--card);border:1px solid var(--line);margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+h2{font-size:clamp(2.1rem,5.5vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
+.grad-text{background:var(--grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradmove 6s linear infinite}
+.lead{color:var(--muted);font-size:clamp(1.05rem,2vw,1.25rem);max-width:600px}
+.center{text-align:center;margin-inline:auto}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding-top:140px}
+.hero>div{min-width:0}
+.hero h1{font-size:clamp(2.7rem,9vw,6.6rem);font-weight:900;line-height:.98;letter-spacing:-3px;margin-bottom:26px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .word{display:inline-block;transform:translateY(110%) rotate(6deg);opacity:0;animation:rise 1s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes rise{to{transform:none;opacity:1}}
+.hero .lead{margin-bottom:36px;opacity:0;animation:fadeup 1s .7s forwards}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;opacity:0;animation:fadeup 1s .9s forwards}
+.hero-note{display:flex;align-items:center;gap:8px;margin-top:22px;color:var(--muted);font-size:.92rem;opacity:0;animation:fadeup 1s 1.1s forwards}
+.hero-note svg{color:var(--lime);width:18px;height:18px}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.typed{color:var(--text);font-weight:700;border-left:2px solid var(--cyan);padding-left:3px;animation:caret .8s step-end infinite}
+@keyframes caret{50%{border-color:transparent}}
+
+/* Phone mockup */
+.phone-wrap{position:relative;display:grid;place-items:center;perspective:1200px;opacity:0;animation:fadeup 1.2s .5s forwards}
+.phone{position:relative;width:270px;height:550px;border-radius:44px;padding:12px;background:linear-gradient(145deg,#2a2a44,#0e0e1c);box-shadow:0 0 0 1.5px rgba(255,255,255,.12),0 50px 100px -20px rgba(0,0,0,.8),0 0 120px -20px rgba(124,92,255,.6);transform-style:preserve-3d;transition:transform .2s ease-out;animation:bob 6s ease-in-out infinite}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.screen{position:relative;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#121228,#0a0a18);padding:46px 16px 16px}
+.notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:90px;height:24px;border-radius:20px;background:#000;z-index:2}
+.app-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.app-head b{font-size:1rem;margin-top:4px}
+.app-head i{width:30px;height:30px;border-radius:50%;background:var(--grad)}
+.app-stat{border-radius:18px;padding:14px;background:linear-gradient(135deg,rgba(124,92,255,.35),rgba(34,211,238,.2));border:1px solid var(--line);margin-bottom:12px}
+.app-stat small{color:var(--muted);font-size:.72rem}
+.app-stat strong{display:block;font-size:1.6rem;font-weight:900}
+.bars{display:flex;align-items:flex-end;gap:6px;height:46px;margin-top:6px}
+.bars span{flex:1;border-radius:5px 5px 2px 2px;background:var(--grad);transform-origin:bottom;animation:bar 2.8s ease-in-out infinite}
+.bars span:nth-child(2){animation-delay:.2s}.bars span:nth-child(3){animation-delay:.4s}.bars span:nth-child(4){animation-delay:.6s}.bars span:nth-child(5){animation-delay:.8s}.bars span:nth-child(6){animation-delay:1s}.bars span:nth-child(7){animation-delay:1.2s}
+@keyframes bar{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.app-row{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;background:var(--card);border:1px solid var(--line);margin-bottom:8px;font-size:.8rem;opacity:0;animation:slidein .6s forwards}
+.app-row:nth-of-type(1){animation-delay:1.4s}.app-row:nth-of-type(2){animation-delay:1.7s}.app-row:nth-of-type(3){animation-delay:2s}.app-row:nth-of-type(4){animation-delay:2.3s}
+@keyframes slidein{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:none}}
+.app-row .av{width:28px;height:28px;border-radius:9px;flex:none}
+.app-row .chk{margin-inline-start:auto;width:18px;height:18px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#06060f;font-size:.7rem;font-weight:900}
+.float-card{position:absolute;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:16px;font-size:.85rem;font-weight:500;background:rgba(18,18,40,.75);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 40px -10px rgba(0,0,0,.6);white-space:nowrap;z-index:3}
+.float-card .ic{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:1rem}
+.fc1{top:30%;right:-8%;animation:bob 5s ease-in-out infinite}
+.fc2{bottom:20%;left:-14%;animation:bob 7s -2s ease-in-out infinite}
+.fc3{bottom:-2%;right:4%;animation:bob 6s -4s ease-in-out infinite}
+.ring{position:absolute;width:420px;height:420px;border-radius:50%;border:1px dashed rgba(255,255,255,.12);animation:spin 40s linear infinite}
+.ring::before{content:"";position:absolute;top:-6px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}
+.ring.r2{width:540px;height:540px;animation-duration:60s;animation-direction:reverse}
+.ring.r2::before{background:var(--pink);box-shadow:0 0 20px var(--pink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Marquee ---------- */
+.marquee{overflow:hidden;padding:26px 0;border-block:1px solid var(--line);background:rgba(255,255,255,.02);transform:rotate(-2deg) scale(1.05);margin:20px 0}
+.marquee-track{display:flex;gap:48px;width:max-content;animation:marq 30s linear infinite}
+.marquee span{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:48px;color:rgba(255,255,255,.85)}
+.marquee span::after{content:"✦";color:var(--violet)}
+.marquee span:nth-child(even){-webkit-text-stroke:1px rgba(255,255,255,.5);color:transparent}
+@keyframes marq{to{transform:translateX(50%)}}
+
+/* ---------- Services ---------- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.card{position:relative;padding:30px 24px;transition:transform .15s ease-out,border-color .3s,opacity 1s,filter 1s!important;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);overflow:hidden;transform-style:preserve-3d;transition:transform .15s ease-out,border-color .3s;min-height:260px;display:flex;flex-direction:column}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(124,92,255,.25),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover::before{opacity:1}
+.card:hover{border-color:rgba(124,92,255,.5)}
+.card .num{position:absolute;top:14px;left:20px;font-size:4.5rem;font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.08)}
+.card .icon{position:relative;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;margin-bottom:auto;background:linear-gradient(135deg,rgba(124,92,255,.3),rgba(34,211,238,.15));border:1px solid var(--line);transform:translateZ(40px)}
+.card .icon svg{width:28px;height:28px;stroke:#fff}
+.card h3{position:relative;font-size:1.35rem;font-weight:800;margin:40px 0 6px;transform:translateZ(30px)}
+.card p{position:relative;color:var(--muted);font-size:.98rem;transform:translateZ(20px)}
+
+/* ---------- Stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:0;padding-bottom:0}
+.stat{text-align:center;padding:30px 10px;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.05),transparent);border:1px solid var(--line)}
+.stat b{display:flex;justify-content:center;align-items:baseline;gap:2px;font-size:clamp(2.4rem,5vw,3.4rem);font-weight:900;line-height:1;margin-bottom:8px}
+.stat>span{color:var(--muted);font-size:.95rem}
+
+/* ---------- Process ---------- */
+.timeline{position:relative;margin-top:70px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.tl-line{position:absolute;top:34px;right:6%;left:6%;height:2px;background:var(--line);overflow:hidden}
+.tl-line i{position:absolute;inset:0;background:var(--grad);transform-origin:right;transform:scaleX(var(--p,0));transition:transform .1s linear}
+.step{position:relative;text-align:center}
+.step .bubble{position:relative;width:68px;height:68px;margin:0 auto 22px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:1.4rem;background:var(--bg2);border:2px solid var(--line);transition:all .5s cubic-bezier(.2,.9,.2,1);z-index:1}
+.step.on .bubble{background:var(--grad);border-color:transparent;box-shadow:0 0 40px rgba(124,92,255,.7);transform:scale(1.08)}
+.step h3{font-size:1.4rem;font-weight:800;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.98rem;max-width:230px;margin-inline:auto}
+
+/* ---------- Contact ---------- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:60px;border-radius:36px;background:linear-gradient(135deg,rgba(124,92,255,.14),rgba(34,211,238,.06) 60%,rgba(255,92,168,.1));border:1px solid var(--line);overflow:hidden;max-width:1140px;margin:120px auto;isolation:isolate}
+.contact::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:conic-gradient(from 0deg,var(--violet),var(--cyan),var(--pink),var(--violet));filter:blur(110px);opacity:.25;top:-50%;left:-20%;animation:spin 18s linear infinite;z-index:-1}
+.contact-info{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.contact-info a{display:flex;align-items:center;gap:12px;color:var(--muted);transition:color .2s,transform .2s;width:fit-content}
+.contact-info a:hover{color:var(--text);transform:translateX(-4px)}
+.contact-info .ci{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line)}
+.contact-info svg{width:18px;height:18px}
+form{display:flex;flex-direction:column;gap:16px}
+.field{position:relative}
+.field input{width:100%;padding:24px 18px 10px;border-radius:16px;font:inherit;font-size:1rem;color:var(--text);background:rgba(6,6,15,.55);border:1px solid var(--line);outline:none;transition:border-color .3s,box-shadow .3s;direction:rtl}
+.field input[type=tel],.field input[type=email]{text-align:right}
+.field label{position:absolute;right:18px;top:17px;color:var(--muted);pointer-events:none;transition:all .2s}
+.field input:focus{border-color:var(--violet);box-shadow:0 0 0 4px rgba(124,92,255,.2)}
+.field input:focus+label,.field input:not(:placeholder-shown)+label{top:6px;font-size:.75rem;color:var(--cyan)}
+form .btn{justify-content:center;width:100%;padding:17px}
+.form-msg{min-height:1.4em;font-size:.95rem;color:var(--lime);text-align:center}
+
+footer{text-align:center;padding:40px 20px 50px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+footer .logo{justify-content:center;margin-bottom:10px;color:var(--text)}
+
+/* Floating WhatsApp */
+.wa-fab{position:fixed;bottom:22px;left:22px;z-index:80;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pulse 2.6s infinite;transition:transform .3s;transform:scale(0)}
+.wa-fab.show{transform:scale(1)}
+.wa-fab svg{width:30px;height:30px;fill:#fff}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(50px);filter:blur(8px);transition:opacity 1s cubic-bezier(.2,.9,.2,1),transform 1s cubic-bezier(.2,.9,.2,1),filter 1s}
+.reveal.in{opacity:1;transform:none;filter:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:200;width:100%;height:100%}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;text-align:center;padding-top:120px;gap:70px}
+  .hero .lead{margin-inline:auto}
+  .hero-ctas,.hero-note{justify-content:center}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .contact{grid-template-columns:1fr;padding:40px 26px;margin:80px 16px}
+}
+@media (max-width:640px){
+  section{padding:80px 16px}
+  .nav-links{display:none}
+  nav{padding:8px 8px 8px 14px}
+  .btn-wa .lbl{display:none}
+  .btn-wa{padding:10px}
+  .hero h1{letter-spacing:-1.5px;font-size:clamp(2.6rem,13vw,4rem)}
+  .cards{grid-template-columns:1fr}
+  .card{min-height:200px}
+  .timeline{grid-template-columns:1fr;gap:36px;padding-right:34px}
+  .tl-line{top:0;bottom:0;right:33px;left:auto;width:2px;height:auto}
+  .tl-line i{transform-origin:top;transform:scaleY(var(--p,0))}
+  .step{display:grid;grid-template-columns:68px 1fr;gap:18px;text-align:right;align-items:center;margin-right:-34px}
+  .step .bubble{margin:0}
+  .step p{margin:0}
+  .phone{width:230px;height:470px}
+  .ring{width:320px;height:320px}.ring.r2{width:400px;height:400px}
+  .fc1{right:-2%}.fc2{left:-4%}
+  .float-card{font-size:.75rem;padding:9px 12px}
+  .float-card .ic{width:26px;height:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none;filter:none}
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div class="aurora"><span></span><span></span><span></span></div>
+<div class="grain"></div>
+<div class="cursor-glow" id="glow"></div>
+<div class="progress" id="progress"></div>
+<canvas id="confetti"></canvas>
+
+<nav id="nav">
+  <a href="#top" class="logo"><span class="logo-mark">A</span><span>Appo<small>פתרונות חכמים לעסקים</small></span></a>
+  <div class="nav-links"><a href="#services">מה אנחנו עושים</a><a href="#process">התהליך</a><a href="#contact">צור קשר</a></div>
+  <a class="btn btn-wa magnetic" href="https://wa.me/972586612727" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+    <span class="lbl">דברו איתנו ב־WhatsApp</span>
+  </a>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="eyebrow" style="opacity:0;animation:fadeup .8s .1s forwards"><span class="dot"></span>פיתוח בהתאמה אישית / 2026</div>
+    <h1>
+      <span class="line"><span class="word" style="animation-delay:.15s">פחות</span> <span class="word" style="animation-delay:.28s">להתעסק.</span></span>
+      <span class="line"><span class="word grad-text" style="animation-delay:.42s">יותר</span> <span class="word grad-text" style="animation-delay:.55s">להתקדם.</span></span>
+    </h1>
+    <p class="lead">הופכים <span class="typed" id="typed">תהליכים ידניים</span> לאפליקציה אחת ברורה</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary magnetic">בואו נדבר
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+      <a href="#services" class="btn btn-ghost magnetic">מה אפשר לבנות?</a>
+    </div>
+    <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>שיחת היכרות ללא עלות וללא התחייבות</div>
+  </div>
+
+  <div class="phone-wrap" aria-hidden="true">
+    <div class="ring"></div><div class="ring r2"></div>
+    <div class="phone" id="phone">
+      <div class="screen">
+        <div class="notch"></div>
+        <div class="app-head"><b>שלום, דנה 👋</b><i></i></div>
+        <div class="app-stat"><small>נוכחות השבוע</small><strong><span class="count" data-to="94">0</span>%</strong>
+          <div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <div class="app-row"><span class="av" style="background:linear-gradient(135deg,#7c5cff,#22d3ee)"></span>רישום חדש התקבל<span class="chk">✓</span></div>
+        <div class="app-row"><span class="av" style="background:linear-gradient(135deg,#ff5ca8,#ffb15c)"></span>תור נקבע ל־16:30<span class="chk">✓</span></div>
+        <div class="app-row"><span class="av" style="background:linear-gradient(135deg,#22d3ee,#b6ff5c)"></span>תזכורת נשלחה אוטומטית<span class="chk">✓</span></div>
+        <div class="app-row"><span class="av" style="background:linear-gradient(135deg,#b6ff5c,#7c5cff)"></span>דוח חודשי מוכן<span class="chk">✓</span></div>
+      </div>
+    </div>
+    <div class="float-card fc1"><span class="ic" style="background:rgba(182,255,92,.18)">⚡</span>אוטומציה הופעלה</div>
+    <div class="float-card fc2"><span class="ic" style="background:rgba(124,92,255,.25)">🤖</span>AI סידר את הלו״ז</div>
+    <div class="float-card fc3"><span class="ic" style="background:rgba(255,92,168,.22)">📅</span>3 הזמנות חדשות</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marq">
+  <span>ניהול לקוחות</span><span>רישום ונוכחות</span><span>תורים והזמנות</span><span>AI ואוטומציות</span><span>פחות טבלאות</span><span>יותר זמן</span>
+</div></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="center" style="text-align:center">
+    <div class="eyebrow reveal">מה אפשר לבנות?</div>
+    <h2 class="reveal d1">העסק שלכם. <span class="grad-text">המערכת שלכם.</span></h2>
+    <p class="lead center reveal d2">כל מה שהיום מפוזר בין וואטסאפ, אקסל ופתקים — במקום אחד, מותאם בדיוק לאיך שאתם עובדים.</p>
+  </div>
+  <div class="cards">
+    <article class="card tilt reveal d1"><span class="num">01</span>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1M16 3.1a4 4 0 0 1 0 7.8M22 21v-1a6 6 0 0 0-4-5.6"/></svg></div>
+      <h3>ניהול לקוחות</h3><p>מידע, מעקב, תיעוד ואזור אישי</p></article>
+    <article class="card tilt reveal d2"><span class="num">02</span>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+      <h3>רישום ונוכחות</h3><p>הרשמה, מיון, קבוצות ומעקב</p></article>
+    <article class="card tilt reveal d3"><span class="num">03</span>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18M8 15h3"/></svg></div>
+      <h3>תורים והזמנות</h3><p>זמינות, סליקה ועדכונים</p></article>
+    <article class="card tilt reveal d4"><span class="num">04</span>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></div>
+      <h3>AI ואוטומציות</h3><p>פחות הקלדה ופעולות חוזרות</p></article>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stat reveal d1"><b dir="ltr"><span class="grad-text count" data-to="0">0</span><span class="grad-text">₪</span></b><span>שיחת היכרות</span></div>
+  <div class="stat reveal d2"><b dir="ltr"><span class="grad-text count" data-to="100">0</span><span class="grad-text">%</span></b><span>בהתאמה אישית</span></div>
+  <div class="stat reveal d3"><b dir="ltr"><span class="grad-text count" data-to="4">0</span><span class="grad-text"></span></b><span>שלבים ברורים</span></div>
+  <div class="stat reveal d4"><b dir="ltr"><span class="grad-text count" data-to="3">0</span><span class="grad-text"></span></b><span>חודשי ליווי</span></div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div style="text-align:center">
+    <div class="eyebrow reveal">התהליך</div>
+    <h2 class="reveal d1">כל העסק שלכם <span class="grad-text">בכף יד</span></h2>
+    <p class="lead center reveal d2">ארבעה צעדים פשוטים — מהשיחה הראשונה ועד אפליקציה שעובדת.</p>
+  </div>
+  <div class="timeline" id="timeline">
+    <div class="tl-line"><i id="tlFill"></i></div>
+    <div class="step"><div class="bubble">1</div><div><h3>מכירים</h3><p>שאלון קצר ושיחה ראשונית ללא עלות.</p></div></div>
+    <div class="step"><div class="bubble">2</div><div><h3>מאפיינים</h3><p>מגדירים יחד מה באמת נחוץ ומה מיותר.</p></div></div>
+    <div class="step"><div class="bubble">3</div><div><h3>בונים</h3><p>אתם רואים, בודקים ומשפיעים לאורך הדרך.</p></div></div>
+    <div class="step"><div class="bubble">4</div><div><h3>עולים לאוויר</h3><p>הדרכה וליווי במשך שלושה חודשים.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact reveal" id="contact">
+  <div>
+    <div class="eyebrow"><span class="dot"></span>זמינים עכשיו</div>
+    <h2>מה הייתם רוצים שיהיה <span class="grad-text">פשוט יותר?</span></h2>
+    <p class="lead">השאירו פרטים ונחזור אליכם</p>
+    <div class="contact-info">
+      <a href="tel:0586612727"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span dir="ltr">058-661-2727</span></a>
+      <a href="mailto:appocreative@gmail.com"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>appocreative@gmail.com</a>
+    </div>
+  </div>
+  <form id="form" novalidate>
+    <div class="field"><input id="name" name="name" placeholder=" " required autocomplete="name"><label for="name">שם מלא *</label></div>
+    <div class="field"><input id="phone-in" name="phone" type="tel" placeholder=" " required autocomplete="tel"><label for="phone-in">טלפון *</label></div>
+    <div class="field"><input id="email" name="email" type="email" placeholder=" " required autocomplete="email"><label for="email">מייל *</label></div>
+    <button class="btn btn-primary magnetic" type="submit">דברו איתי
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+    <div class="form-msg" id="formMsg" role="status"></div>
+  </form>
+</div>
+</main>
+
+<footer>
+  <div class="logo"><span class="logo-mark">A</span>Appo</div>
+  פתרונות חכמים לעסקים קטנים · <span dir="ltr">058-661-2727</span> · appocreative@gmail.com
+</footer>
+
+<a class="wa-fab" id="waFab" href="https://wa.me/972586612727" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(pointer: fine)').matches;
+
+  /* Starfield */
+  const sc = document.getElementById('stars'), sx = sc.getContext('2d');
+  let stars = [], W, H, DPR = Math.min(devicePixelRatio || 1, 2);
+  function sizeStars(){
+    W = sc.width = innerWidth * DPR; H = sc.height = innerHeight * DPR;
+    stars = Array.from({length: Math.min(160, innerWidth / 6)}, () => ({x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.4*DPR+.2, s: Math.random()*.3+.05, t: Math.random()*6}));
+  }
+  sizeStars(); addEventListener('resize', sizeStars);
+  function drawStars(){
+    sx.clearRect(0,0,W,H);
+    const sy = scrollY * .15 * DPR;
+    for (const s of stars){
+      s.t += .02;
+      const a = .35 + Math.sin(s.t) * .3;
+      sx.fillStyle = `rgba(255,255,255,${a})`;
+      sx.beginPath(); sx.arc(s.x, (s.y - sy * s.s * 3 % H + H) % H, s.r, 0, 7); sx.fill();
+    }
+    if (!reduce) requestAnimationFrame(drawStars);
+  }
+  drawStars();
+
+  /* Cursor glow */
+  const glow = document.getElementById('glow');
+  if (fine) addEventListener('pointermove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+  else glow.style.display = 'none';
+
+  /* Scroll: progress, nav, FAB, timeline */
+  const prog = document.getElementById('progress'), nav = document.getElementById('nav'), fab = document.getElementById('waFab');
+  const tl = document.getElementById('timeline'), tlFill = document.getElementById('tlFill'), steps = [...tl.querySelectorAll('.step')];
+  function onScroll(){
+    const max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    nav.classList.toggle('scrolled', scrollY > 40);
+    fab.classList.toggle('show', scrollY > innerHeight * .7);
+    const r = tl.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, (innerHeight * .75 - r.top) / (r.height + innerHeight * .2)));
+    tlFill.style.setProperty('--p', p);
+    steps.forEach((s, i) => s.classList.toggle('on', p >= i / steps.length + .05));
+  }
+  addEventListener('scroll', onScroll, {passive: true}); onScroll();
+
+  /* Reveal + counters */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('.count').forEach(countUp);
+    io.unobserve(e.target);
+  }), {threshold: .15, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  function countUp(el){
+    if (el.dataset.done) return; el.dataset.done = 1;
+    const to = +el.dataset.to, dur = 1600, t0 = performance.now();
+    (function f(t){ const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(f); })(t0);
+  }
+  setTimeout(() => document.querySelectorAll('.phone .count').forEach(countUp), 900);
+
+  /* Typing effect */
+  const words = ['תהליכים ידניים', 'הודעות וואטסאפ', 'טבלאות אקסל', 'ניירת אינסופית'];
+  const typed = document.getElementById('typed');
+  if (!reduce){
+    let wi = 0, ci = words[0].length, del = true;
+    setTimeout(function tick(){
+      const w = words[wi];
+      ci += del ? -1 : 1;
+      typed.textContent = w.slice(0, ci) || '​';
+      let d = del ? 45 : 85;
+      if (!del && ci === w.length){ del = true; d = 1800; }
+      else if (del && ci === 0){ del = false; wi = (wi + 1) % words.length; ci = 0; d = 300; }
+      setTimeout(tick, d);
+    }, 2600);
+  }
+
+  /* Marquee duplicate */
+  const mq = document.getElementById('marq'); mq.innerHTML += mq.innerHTML;
+
+  if (fine && !reduce){
+    /* 3D tilt + spotlight on cards */
+    document.querySelectorAll('.tilt').forEach(c => {
+      c.addEventListener('pointermove', e => {
+        const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        c.style.transform = `perspective(900px) rotateX(${(.5 - y) * 14}deg) rotateY(${(x - .5) * 14}deg) translateY(-6px)`;
+        c.style.setProperty('--mx', x * 100 + '%'); c.style.setProperty('--my', y * 100 + '%');
+      });
+      c.addEventListener('pointerleave', () => c.style.transform = '');
+    });
+    /* Phone follows mouse */
+    const ph = document.getElementById('phone');
+    addEventListener('pointermove', e => {
+      const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+      ph.style.transform = `rotateY(${x * 22}deg) rotateX(${-y * 16}deg)`;
+    });
+    /* Magnetic buttons */
+    document.querySelectorAll('.magnetic').forEach(b => {
+      b.addEventListener('pointermove', e => {
+        const r = b.getBoundingClientRect();
+        b.style.transform = `translate(${(e.clientX - r.left - r.width/2) * .25}px, ${(e.clientY - r.top - r.height/2) * .35}px)`;
+      });
+      b.addEventListener('pointerleave', () => b.style.transform = '');
+    });
+  }
+
+  /* Confetti */
+  const cc = document.getElementById('confetti'), cx = cc.getContext('2d');
+  function confetti(){
+    if (reduce) return;
+    cc.width = innerWidth; cc.height = innerHeight;
+    const cols = ['#7c5cff','#22d3ee','#ff5ca8','#b6ff5c','#ffffff'];
+    const ps = Array.from({length: 160}, () => ({x: innerWidth/2, y: innerHeight*.6, vx: (Math.random()-.5)*16, vy: -Math.random()*16-6, r: Math.random()*6+3, c: cols[Math.random()*5|0], a: Math.random()*6, va: (Math.random()-.5)*.3}));
+    let f = 0;
+    (function draw(){
+      cx.clearRect(0,0,cc.width,cc.height);
+      ps.forEach(p => { p.vy += .4; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.a += p.va;
+        cx.save(); cx.translate(p.x,p.y); cx.rotate(p.a); cx.fillStyle = p.c; cx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); cx.restore(); });
+      if (++f < 180) requestAnimationFrame(draw); else cx.clearRect(0,0,cc.width,cc.height);
+    })();
+  }
+
+  /* Form → opens WhatsApp with the details */
+  const form = document.getElementById('form'), msg = document.getElementById('formMsg');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const n = form.name.value.trim(), p = form.phone.value.trim(), m = form.email.value.trim();
+    if (!n || !p || !/^\S+@\S+\.\S+$/.test(m)){ msg.style.color = '#ff8fb8'; msg.textContent = 'נא למלא את כל השדות'; return; }
+    msg.style.color = ''; msg.textContent = 'תודה! נחזור אליכם בהקדם 🎉';
+    confetti();
+    const text = `היי Appo, אשמח לשיחת היכרות 🙂\nשם: ${n}\nטלפון: ${p}\nמייל: ${m}`;
+    setTimeout(() => window.open('https://wa.me/972586612727?text=' + encodeURIComponent(text), '_blank'), 900);
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
