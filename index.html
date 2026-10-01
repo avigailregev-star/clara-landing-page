@@ -17,8 +17,10 @@
   --radius:22px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
-main{overflow-x:clip}
+html,body{overflow-x:hidden;overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{position:relative;touch-action:pan-y pinch-zoom}
+main{overflow:hidden;overflow:clip;width:100%}
 body{font-family:'Heebo',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--violet);color:#fff}
@@ -32,7 +34,7 @@ a{color:inherit;text-decoration:none}
 .aurora span:nth-child(3){width:35vmax;height:35vmax;background:var(--pink);top:40%;right:30%;animation-delay:-14s;opacity:.45}
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(8vw,-6vh) scale(1.15)}66%{transform:translate(-6vw,8vh) scale(.9)}}
 .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.cursor-glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(124,92,255,.22),transparent 60%);transform:translate(-50%,-50%);left:-999px;top:-999px;transition:opacity .3s}
+.cursor-glow{position:fixed;display:none;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(124,92,255,.22),transparent 60%);transform:translate(-50%,-50%);left:-999px;top:-999px;transition:opacity .3s}
 
 /* ---------- Progress + Nav ---------- */
 .progress{position:fixed;top:0;right:0;left:0;height:3px;background:var(--grad);transform-origin:right;transform:scaleX(0);z-index:100}
@@ -86,7 +88,7 @@ h2{font-size:clamp(2.1rem,5.5vw,3.8rem);font-weight:900;line-height:1.1;letter-s
 @keyframes caret{50%{border-color:transparent}}
 
 /* Phone mockup */
-.phone-wrap{position:relative;display:grid;place-items:center;perspective:1200px;opacity:0;animation:fadeup 1.2s .5s forwards}
+.phone-wrap{position:relative;max-width:100%;display:grid;place-items:center;perspective:1200px;opacity:0;animation:fadeup 1.2s .5s forwards}
 .phone{position:relative;width:270px;height:550px;border-radius:44px;padding:12px;background:linear-gradient(145deg,#2a2a44,#0e0e1c);box-shadow:0 0 0 1.5px rgba(255,255,255,.12),0 50px 100px -20px rgba(0,0,0,.8),0 0 120px -20px rgba(124,92,255,.6);transform-style:preserve-3d;transition:transform .2s ease-out;animation:bob 6s ease-in-out infinite}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -16px}}
 .screen{position:relative;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#121228,#0a0a18);padding:46px 16px 16px}
@@ -204,14 +206,14 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:200;width:100
   .hero h1{letter-spacing:-1.5px;font-size:clamp(2.6rem,13vw,4rem)}
   .cards{grid-template-columns:1fr}
   .card{min-height:200px}
-  .timeline{grid-template-columns:1fr;gap:36px;padding-right:34px}
+  .timeline{grid-template-columns:1fr;gap:36px}
   .tl-line{top:0;bottom:0;right:33px;left:auto;width:2px;height:auto}
   .tl-line i{transform-origin:top;transform:scaleY(var(--p,0))}
-  .step{display:grid;grid-template-columns:68px 1fr;gap:18px;text-align:right;align-items:center;margin-right:-34px}
+  .step{display:grid;grid-template-columns:68px 1fr;gap:18px;text-align:right;align-items:center}
   .step .bubble{margin:0}
   .step p{margin:0}
   .phone{width:230px;height:470px}
-  .ring{width:320px;height:320px}.ring.r2{width:400px;height:400px}
+  .ring{width:300px;height:300px}.ring.r2{width:min(380px,96vw);height:min(380px,96vw)}
   .fc1{right:-2%}.fc2{left:-4%}
   .float-card{font-size:.75rem;padding:9px 12px}
   .float-card .ic{width:26px;height:26px}
@@ -388,7 +390,7 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:200;width:100
 
   /* Cursor glow */
   const glow = document.getElementById('glow');
-  if (fine) addEventListener('pointermove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+  if (fine) { glow.style.display='block'; } if (fine) addEventListener('pointermove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
   else glow.style.display = 'none';
 
   /* Scroll: progress, nav, FAB, timeline */
