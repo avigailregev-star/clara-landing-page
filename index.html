@@ -484,17 +484,25 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:200;width:100
     })();
   }
 
-  /* Form → opens WhatsApp with the details */
+  /* Form → Google Sheets (Apps Script). Paste the Web App URL below. */
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwyA1RhkYWSq-g9DMHYYLiRQtkRUGqEk7BTB4_KUuGjbl5gslt7YTbBkmIsoS-Q0ah0/exec'; // e.g. https://script.google.com/macros/s/XXXX/exec
   const form = document.getElementById('form'), msg = document.getElementById('formMsg');
-  form.addEventListener('submit', e => {
+  const btn = form.querySelector('button');
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const n = form.name.value.trim(), p = form.phone.value.trim(), m = form.email.value.trim();
     if (!n || !p || !/^\S+@\S+\.\S+$/.test(m)){ msg.style.color = '#ff8fb8'; msg.textContent = 'נא למלא את כל השדות'; return; }
-    msg.style.color = ''; msg.textContent = 'תודה! נחזור אליכם בהקדם 🎉';
-    confetti();
-    const text = `היי Appo, אשמח לשיחת היכרות 🙂\nשם: ${n}\nטלפון: ${p}\nמייל: ${m}`;
-    setTimeout(() => window.open('https://wa.me/972586612727?text=' + encodeURIComponent(text), '_blank'), 900);
-    form.reset();
+    btn.disabled = true; msg.style.color = ''; msg.textContent = 'שולח...';
+    try {
+      if (!SHEET_URL) throw new Error('no url');
+      const body = new URLSearchParams({name: n, phone: p, email: m});
+      await fetch(SHEET_URL, {method: 'POST', mode: 'no-cors', body});
+      msg.textContent = 'תודה! הפרטים התקבלו, נחזור אליכם בהקדם 🎉';
+      confetti(); form.reset();
+    } catch (err) {
+      msg.style.color = '#ff8fb8';
+      msg.innerHTML = 'משהו השתבש. אפשר לכתוב לנו ישירות ב<a href="https://wa.me/972586612727" target="_blank" rel="noopener" style="text-decoration:underline">וואטסאפ</a>';
+    } finally { btn.disabled = false; }
   });
 })();
 </script>
